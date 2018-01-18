@@ -21,10 +21,16 @@ namespace Emzi0767.FileAssembler
             cli.HelpOption("-? | -h | --help");
             cli.OnExecute(async () =>
             {
+                if (string.IsNullOrWhiteSpace(md.Value))
+                {
+                    cli.ShowHelp();
+                    return 64.StopIfDebugger();
+                }
+
                 if (!fn.HasValue())
                 {
                     cli.ShowHelp();
-                    return 0.StopIfDebugger();
+                    return 32.StopIfDebugger();
                 }
 
                 var xfn = fn.Value();
@@ -111,6 +117,11 @@ namespace Emzi0767.FileAssembler
 
                     var op = new Splitter();
                     await op.SplitFileAsync(fi, digits, di);
+                }
+                else
+                {
+                    cli.ShowHelp();
+                    return 64.StopIfDebugger();
                 }
                 
                 return 0.StopIfDebugger();
