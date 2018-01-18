@@ -55,9 +55,9 @@ Arguments are as follows:
 program split arguments...
 
 arguments accepted:
-  -f | --filename			File to split.
-  -s | --chunk-size			Size of the output chunk, in bytes.
-  -o | --output-directory	Directory in which the files will be placed.
+  -f | --filename           File to split.
+  -s | --chunk-size         Size of the output chunk, in bytes.
+  -o | --output-directory   Directory in which the files will be placed.
 ```
 
 Chunk size can be specified with one of the following prefixes:
@@ -108,8 +108,8 @@ Arguments are as follows:
 program assemble arguments...
 
 arguments accepted:
-  -f | --filename			Metadata of the file to assemble.
-  -o | --output-directory	Directory in which the files will be placed.
+  -f | --filename           Metadata of the file to assemble.
+  -o | --output-directory   Directory in which the files will be placed.
 ```
 
 When output directory is not specified, output files will be placed alongside the metadata file.
