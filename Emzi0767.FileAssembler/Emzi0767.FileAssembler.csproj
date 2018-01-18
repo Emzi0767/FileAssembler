@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <LangVersion>7.1</LangVersion>
+    <Optimize>True</Optimize>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Description>A simple program which can split and assemble files. This is useful for transport scenarios.</Description>
+    <Authors>Emzi0767</Authors>
+    <Company>Emzi0767</Company>
+    <PackageLicenseUrl>https://github.com/Emzi0767/FileAssembler/blob/master/LICENSE.TXT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Emzi0767/FileAssembler</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Emzi0767/FileAssembler</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TargetFrameworks>netcoreapp2.0</TargetFrameworks>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(VersionSuffix)' != ''">
+    <Version>$(VersionPrefix)-beta-$(VersionSuffix)</Version>
+    <AssemblyVersion>$(VersionPrefix).$(VersionSuffix)</AssemblyVersion>
+    <FileVersion>$(VersionPrefix).$(VersionSuffix)</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(VersionSuffix)' == ''">
+    <Version>$(VersionPrefix)</Version>
+    <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+    <FileVersion>$(VersionPrefix).0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+  </ItemGroup>
+
+</Project>

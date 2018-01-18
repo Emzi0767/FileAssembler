@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Emzi0767.FileAssembler", "Emzi0767.FileAssembler\Emzi0767.FileAssembler.csproj", "{B951FEA2-B3B9-4A8A-943A-EC5A1F59FB62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D0F540D-33F4-4F95-809D-7AF49E6D57A2}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.TXT = LICENSE.TXT
+		NOTICE.TXT = NOTICE.TXT
+		README.MD = README.MD
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B951FEA2-B3B9-4A8A-943A-EC5A1F59FB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B951FEA2-B3B9-4A8A-943A-EC5A1F59FB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B951FEA2-B3B9-4A8A-943A-EC5A1F59FB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B951FEA2-B3B9-4A8A-943A-EC5A1F59FB62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29B670DD-F408-467C-B8B4-FFF7CC7B2FD7}
+	EndGlobalSection
+EndGlobal
