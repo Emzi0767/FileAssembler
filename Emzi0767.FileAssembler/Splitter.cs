@@ -9,7 +9,7 @@ namespace Emzi0767.FileAssembler
 {
     public sealed class Splitter
     {
-        public async Task SplitFileAsync(FileInfo file, int chunkSize, DirectoryInfo output)
+        public async Task SplitFileAsync(FileInfo file, long chunkSize, DirectoryInfo output)
         {
             var buff0 = new byte[4 * 1024 * 1024];
             var buff1 = new byte[buff0.Length];
@@ -55,7 +55,7 @@ namespace Emzi0767.FileAssembler
                             ccf = new FileInfo(ccp);
                             ccfs = ccf.Create();
                             cch = SHA256.Create();
-                            cklr = lr > chunkSize ? chunkSize : (int)lr;
+                            cklr = lr > chunkSize ? chunkSize : lr;
 
                             Console.WriteLine($"Beginning chunk {ccn}");
                         }
@@ -64,11 +64,11 @@ namespace Emzi0767.FileAssembler
                         if (cklr <= br)
                         {
                             // yes
-                            await ccfs.WriteAsync(buff0, br - rbr, cklr);
+                            await ccfs.WriteAsync(buff0, br - rbr, (int)cklr);
                             await ccfs.FlushAsync();
-                            cch.TransformFinalBlock(buff0, br - rbr, cklr);
+                            cch.TransformFinalBlock(buff0, br - rbr, (int)cklr);
 
-                            rbr -= cklr;
+                            rbr -= (int)cklr;
                             cklr = 0;
                         }
                         else

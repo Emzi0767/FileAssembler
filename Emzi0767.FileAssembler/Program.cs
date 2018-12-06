@@ -75,7 +75,7 @@ namespace Emzi0767.FileAssembler
                         return 4.StopIfDebugger();
                     }
 
-                    if (!int.TryParse(m.Groups["digits"].Value, NumberStyles.Number, CultureInfo.InvariantCulture, out var digits))
+                    if (!long.TryParse(m.Groups["digits"].Value, NumberStyles.Number, CultureInfo.InvariantCulture, out var digits))
                     {
                         Console.WriteLine("Something went seriously wrong when parsing chunk size.");
                         return 8.StopIfDebugger();
